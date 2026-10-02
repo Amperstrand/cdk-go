@@ -475,6 +475,15 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_cdk_ffi_checksum_func_decode_melt_prepare_options()
+		})
+		if checksum != 21523 {
+			// If this happens try cleaning and rebuilding your project
+			panic("cdk_ffi: uniffi_cdk_ffi_checksum_func_decode_melt_prepare_options: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_func_decode_melt_quote()
 		})
 		if checksum != 31843 {
@@ -651,6 +660,15 @@ func uniffiCheckChecksums() {
 		if checksum != 20045 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_func_encode_keys: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_cdk_ffi_checksum_func_encode_melt_prepare_options()
+		})
+		if checksum != 37237 {
+			// If this happens try cleaning and rebuilding your project
+			panic("cdk_ffi: uniffi_cdk_ffi_checksum_func_encode_melt_prepare_options: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -1944,7 +1962,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status()
 		})
-		if checksum != 4397 {
+		if checksum != 22697 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status: UniFFI API checksum mismatch")
 		}
@@ -2007,7 +2025,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_fetch_mint_quote()
 		})
-		if checksum != 52100 {
+		if checksum != 16670 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_fetch_mint_quote: UniFFI API checksum mismatch")
 		}
@@ -2284,11 +2302,29 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_proofs_with_options()
+		})
+		if checksum != 23204 {
+			// If this happens try cleaning and rebuilding your project
+			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_proofs_with_options: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_token()
 		})
 		if checksum != 3555 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_token: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_token_with_options()
+		})
+		if checksum != 9417 {
+			// If this happens try cleaning and rebuilding your project
+			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_token_with_options: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -7568,6 +7604,9 @@ type WalletInterface interface {
 	// **Note:** The mint quote must be known to the wallet (stored locally) for this
 	// function to work. If the quote is not stored locally, use `fetch_mint_quote`
 	// instead.
+	//
+	// # Errors
+	// Returns an error for a mismatched response quote ID before changing local state.
 	CheckMintQuoteStatus(quoteId string) (MintQuote, error)
 	// Check if proofs are spent
 	CheckProofsSpent(proofs []Proof) ([]bool, error)
@@ -7621,6 +7660,9 @@ type WalletInterface interface {
 	// * `payment_method` - The payment method for the quote. Required if the quote
 	// is not already stored locally. If the quote exists locally, the stored
 	// payment method will be used and this parameter is ignored.
+	//
+	// # Errors
+	// Returns an error for a mismatched response quote ID before storing the quote.
 	FetchMintQuote(quoteId string, paymentMethod *PaymentMethod) (MintQuote, error)
 	// Finalize pending melt operations for this wallet.
 	FinalizePendingMelts() ([]FinalizedMelt, error)
@@ -7759,6 +7801,23 @@ type WalletInterface interface {
 	//
 	// A `PreparedMelt` that can be confirmed or cancelled
 	PrepareMeltProofs(quoteId string, proofs []Proof) (*PreparedMelt, error)
+	// Prepare a melt operation with specific proofs and additional options
+	//
+	// Same as `prepare_melt_proofs`, with P2PK/HTLC-locked proofs signed
+	// using `options.p2pk_signing_keys` plus any signing keys known to the
+	// wallet, and HTLC preimages from `options.preimages` attached, before
+	// the proofs are reserved.
+	//
+	// # Arguments
+	//
+	// * `quote_id` - The melt quote ID (obtained from `melt_quote`)
+	// * `proofs` - The proofs to melt (can be external proofs not in the wallet's database)
+	// * `options` - Signing keys, preimages, and metadata for the prepare step
+	//
+	// # Returns
+	//
+	// A `PreparedMelt` that can be confirmed or cancelled
+	PrepareMeltProofsWithOptions(quoteId string, proofs []Proof, options MeltPrepareOptions) (*PreparedMelt, error)
 	// Prepare a melt operation from an encoded token
 	//
 	// Decodes the token internally (handling keyset state for v2 keysets),
@@ -7773,6 +7832,21 @@ type WalletInterface interface {
 	//
 	// A `PreparedMelt` that can be confirmed or cancelled
 	PrepareMeltToken(quoteId string, encodedToken string) (*PreparedMelt, error)
+	// Prepare a melt operation from an encoded token with additional options
+	//
+	// Same as `prepare_melt_token`, with locked inputs handled as described
+	// in `prepare_melt_proofs_with_options`.
+	//
+	// # Arguments
+	//
+	// * `quote_id` - The melt quote ID (obtained from `melt_quote`)
+	// * `encoded_token` - The encoded token string (cashuA or cashuB format)
+	// * `options` - Signing keys, preimages, and metadata for the prepare step
+	//
+	// # Returns
+	//
+	// A `PreparedMelt` that can be confirmed or cancelled
+	PrepareMeltTokenWithOptions(quoteId string, encodedToken string, options MeltPrepareOptions) (*PreparedMelt, error)
 	// Prepare a NUT-18 payment request so its method and input fees can be reviewed.
 	//
 	// Call `confirm` or `cancel` on the returned object to complete the flow.
@@ -8151,6 +8225,9 @@ func (_self *Wallet) CheckMintQuote(quoteId string) (MintQuote, error) {
 // **Note:** The mint quote must be known to the wallet (stored locally) for this
 // function to work. If the quote is not stored locally, use `fetch_mint_quote`
 // instead.
+//
+// # Errors
+// Returns an error for a mismatched response quote ID before changing local state.
 func (_self *Wallet) CheckMintQuoteStatus(quoteId string) (MintQuote, error) {
 	_pointer := _self.ffiObject.incrementPointer("*Wallet")
 	defer _self.ffiObject.decrementPointer()
@@ -8436,6 +8513,9 @@ func (_self *Wallet) FetchMintInfo() (*MintInfo, error) {
 // * `payment_method` - The payment method for the quote. Required if the quote
 // is not already stored locally. If the quote exists locally, the stored
 // payment method will be used and this parameter is ignored.
+//
+// # Errors
+// Returns an error for a mismatched response quote ID before storing the quote.
 func (_self *Wallet) FetchMintQuote(quoteId string, paymentMethod *PaymentMethod) (MintQuote, error) {
 	_pointer := _self.ffiObject.incrementPointer("*Wallet")
 	defer _self.ffiObject.decrementPointer()
@@ -9563,6 +9643,55 @@ func (_self *Wallet) PrepareMeltProofs(quoteId string, proofs []Proof) (*Prepare
 	return res, err
 }
 
+// Prepare a melt operation with specific proofs and additional options
+//
+// Same as `prepare_melt_proofs`, with P2PK/HTLC-locked proofs signed
+// using `options.p2pk_signing_keys` plus any signing keys known to the
+// wallet, and HTLC preimages from `options.preimages` attached, before
+// the proofs are reserved.
+//
+// # Arguments
+//
+// * `quote_id` - The melt quote ID (obtained from `melt_quote`)
+// * `proofs` - The proofs to melt (can be external proofs not in the wallet's database)
+// * `options` - Signing keys, preimages, and metadata for the prepare step
+//
+// # Returns
+//
+// A `PreparedMelt` that can be confirmed or cancelled
+func (_self *Wallet) PrepareMeltProofsWithOptions(quoteId string, proofs []Proof, options MeltPrepareOptions) (*PreparedMelt, error) {
+	_pointer := _self.ffiObject.incrementPointer("*Wallet")
+	defer _self.ffiObject.decrementPointer()
+	res, err := uniffiRustCallAsync[*FfiError](
+		FfiConverterFfiErrorINSTANCE,
+		// completeFn
+		func(handle C.uint64_t, status *C.RustCallStatus) C.uint64_t {
+			res := C.ffi_cdk_ffi_rust_future_complete_u64(handle, status)
+			return res
+		},
+		// liftFn
+		func(ffi C.uint64_t) *PreparedMelt {
+			return FfiConverterPreparedMeltINSTANCE.Lift(ffi)
+		},
+		C.uniffi_cdk_ffi_fn_method_wallet_prepare_melt_proofs_with_options(
+			_pointer, FfiConverterStringINSTANCE.Lower(quoteId), FfiConverterSequenceProofINSTANCE.Lower(proofs), FfiConverterMeltPrepareOptionsINSTANCE.Lower(options)),
+		// pollFn
+		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_poll_u64(handle, continuation, data)
+		},
+		// freeFn
+		func(handle C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_free_u64(handle)
+		},
+	)
+
+	if err == nil {
+		return res, nil
+	}
+
+	return res, err
+}
+
 // Prepare a melt operation from an encoded token
 //
 // Decodes the token internally (handling keyset state for v2 keysets),
@@ -9592,6 +9721,53 @@ func (_self *Wallet) PrepareMeltToken(quoteId string, encodedToken string) (*Pre
 		},
 		C.uniffi_cdk_ffi_fn_method_wallet_prepare_melt_token(
 			_pointer, FfiConverterStringINSTANCE.Lower(quoteId), FfiConverterStringINSTANCE.Lower(encodedToken)),
+		// pollFn
+		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_poll_u64(handle, continuation, data)
+		},
+		// freeFn
+		func(handle C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_free_u64(handle)
+		},
+	)
+
+	if err == nil {
+		return res, nil
+	}
+
+	return res, err
+}
+
+// Prepare a melt operation from an encoded token with additional options
+//
+// Same as `prepare_melt_token`, with locked inputs handled as described
+// in `prepare_melt_proofs_with_options`.
+//
+// # Arguments
+//
+// * `quote_id` - The melt quote ID (obtained from `melt_quote`)
+// * `encoded_token` - The encoded token string (cashuA or cashuB format)
+// * `options` - Signing keys, preimages, and metadata for the prepare step
+//
+// # Returns
+//
+// A `PreparedMelt` that can be confirmed or cancelled
+func (_self *Wallet) PrepareMeltTokenWithOptions(quoteId string, encodedToken string, options MeltPrepareOptions) (*PreparedMelt, error) {
+	_pointer := _self.ffiObject.incrementPointer("*Wallet")
+	defer _self.ffiObject.decrementPointer()
+	res, err := uniffiRustCallAsync[*FfiError](
+		FfiConverterFfiErrorINSTANCE,
+		// completeFn
+		func(handle C.uint64_t, status *C.RustCallStatus) C.uint64_t {
+			res := C.ffi_cdk_ffi_rust_future_complete_u64(handle, status)
+			return res
+		},
+		// liftFn
+		func(ffi C.uint64_t) *PreparedMelt {
+			return FfiConverterPreparedMeltINSTANCE.Lift(ffi)
+		},
+		C.uniffi_cdk_ffi_fn_method_wallet_prepare_melt_token_with_options(
+			_pointer, FfiConverterStringINSTANCE.Lower(quoteId), FfiConverterStringINSTANCE.Lower(encodedToken), FfiConverterMeltPrepareOptionsINSTANCE.Lower(options)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
 			C.ffi_cdk_ffi_rust_future_poll_u64(handle, continuation, data)
@@ -19303,6 +19479,59 @@ func (_ FfiDestroyerMeltMethodSettings) Destroy(value MeltMethodSettings) {
 	value.Destroy()
 }
 
+// FFI-compatible Melt prepare options
+type MeltPrepareOptions struct {
+	// Signing keys for P2PK/HTLC-locked input proofs; keys known to the
+	// wallet are merged in automatically
+	P2pkSigningKeys []SecretKey
+	// Preimages for HTLC-locked input proofs
+	Preimages []string
+	// Metadata
+	Metadata map[string]string
+}
+
+func (r *MeltPrepareOptions) Destroy() {
+	FfiDestroyerSequenceSecretKey{}.Destroy(r.P2pkSigningKeys)
+	FfiDestroyerSequenceString{}.Destroy(r.Preimages)
+	FfiDestroyerMapStringString{}.Destroy(r.Metadata)
+}
+
+type FfiConverterMeltPrepareOptions struct{}
+
+var FfiConverterMeltPrepareOptionsINSTANCE = FfiConverterMeltPrepareOptions{}
+
+func (c FfiConverterMeltPrepareOptions) Lift(rb RustBufferI) MeltPrepareOptions {
+	return LiftFromRustBuffer[MeltPrepareOptions](c, rb)
+}
+
+func (c FfiConverterMeltPrepareOptions) Read(reader io.Reader) MeltPrepareOptions {
+	return MeltPrepareOptions{
+		FfiConverterSequenceSecretKeyINSTANCE.Read(reader),
+		FfiConverterSequenceStringINSTANCE.Read(reader),
+		FfiConverterMapStringStringINSTANCE.Read(reader),
+	}
+}
+
+func (c FfiConverterMeltPrepareOptions) Lower(value MeltPrepareOptions) C.RustBuffer {
+	return LowerIntoRustBuffer[MeltPrepareOptions](c, value)
+}
+
+func (c FfiConverterMeltPrepareOptions) LowerExternal(value MeltPrepareOptions) ExternalCRustBuffer {
+	return RustBufferFromC(LowerIntoRustBuffer[MeltPrepareOptions](c, value))
+}
+
+func (c FfiConverterMeltPrepareOptions) Write(writer io.Writer, value MeltPrepareOptions) {
+	FfiConverterSequenceSecretKeyINSTANCE.Write(writer, value.P2pkSigningKeys)
+	FfiConverterSequenceStringINSTANCE.Write(writer, value.Preimages)
+	FfiConverterMapStringStringINSTANCE.Write(writer, value.Metadata)
+}
+
+type FfiDestroyerMeltPrepareOptions struct{}
+
+func (_ FfiDestroyerMeltPrepareOptions) Destroy(value MeltPrepareOptions) {
+	value.Destroy()
+}
+
 // FFI-compatible MeltQuote
 type MeltQuote struct {
 	// Quote ID
@@ -27666,6 +27895,21 @@ func DecodeKeys(json string) (Keys, error) {
 	}
 }
 
+// Decode MeltPrepareOptions from JSON string
+func DecodeMeltPrepareOptions(json string) (MeltPrepareOptions, error) {
+	_uniffiRV, _uniffiErr := rustCallWithError[*FfiError](FfiConverterFfiError{}, func(_uniffiStatus *C.RustCallStatus) RustBufferI {
+		return GoRustBuffer{
+			inner: C.uniffi_cdk_ffi_fn_func_decode_melt_prepare_options(FfiConverterStringINSTANCE.Lower(json), _uniffiStatus),
+		}
+	})
+	if _uniffiErr != nil {
+		var _uniffiDefaultValue MeltPrepareOptions
+		return _uniffiDefaultValue, _uniffiErr
+	} else {
+		return FfiConverterMeltPrepareOptionsINSTANCE.Lift(_uniffiRV), nil
+	}
+}
+
 // Decode MeltQuote from JSON string
 func DecodeMeltQuote(json string) (MeltQuote, error) {
 	_uniffiRV, _uniffiErr := rustCallWithError[*FfiError](FfiConverterFfiError{}, func(_uniffiStatus *C.RustCallStatus) RustBufferI {
@@ -27954,6 +28198,21 @@ func EncodeKeys(keys Keys) (string, error) {
 	_uniffiRV, _uniffiErr := rustCallWithError[*FfiError](FfiConverterFfiError{}, func(_uniffiStatus *C.RustCallStatus) RustBufferI {
 		return GoRustBuffer{
 			inner: C.uniffi_cdk_ffi_fn_func_encode_keys(FfiConverterKeysINSTANCE.Lower(keys), _uniffiStatus),
+		}
+	})
+	if _uniffiErr != nil {
+		var _uniffiDefaultValue string
+		return _uniffiDefaultValue, _uniffiErr
+	} else {
+		return FfiConverterStringINSTANCE.Lift(_uniffiRV), nil
+	}
+}
+
+// Encode MeltPrepareOptions to JSON string
+func EncodeMeltPrepareOptions(options MeltPrepareOptions) (string, error) {
+	_uniffiRV, _uniffiErr := rustCallWithError[*FfiError](FfiConverterFfiError{}, func(_uniffiStatus *C.RustCallStatus) RustBufferI {
+		return GoRustBuffer{
+			inner: C.uniffi_cdk_ffi_fn_func_encode_melt_prepare_options(FfiConverterMeltPrepareOptionsINSTANCE.Lower(options), _uniffiStatus),
 		}
 	})
 	if _uniffiErr != nil {
