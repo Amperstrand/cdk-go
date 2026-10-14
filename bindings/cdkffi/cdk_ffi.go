@@ -1926,7 +1926,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_check_melt_quote_status()
 		})
-		if checksum != 42910 {
+		if checksum != 53868 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_check_melt_quote_status: UniFFI API checksum mismatch")
 		}
@@ -1944,7 +1944,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status()
 		})
-		if checksum != 4397 {
+		if checksum != 47393 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_check_mint_quote_status: UniFFI API checksum mismatch")
 		}
@@ -2007,9 +2007,18 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_cdk_ffi_checksum_method_wallet_fetch_mint_quote()
 		})
-		if checksum != 52100 {
+		if checksum != 36215 {
 			// If this happens try cleaning and rebuilding your project
 			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_fetch_mint_quote: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_cdk_ffi_checksum_method_wallet_fetch_mint_quote_with_key_search()
+		})
+		if checksum != 7587 {
+			// If this happens try cleaning and rebuilding your project
+			panic("cdk_ffi: uniffi_cdk_ffi_checksum_method_wallet_fetch_mint_quote_with_key_search: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -7540,6 +7549,7 @@ type WalletInterface interface {
 	// transitions.
 	CheckAllPendingProofs() (Amount, error)
 	// Check melt quote status and attempt to complete any in-progress saga.
+	// Returns the persisted database version and ownership after status/recovery writes.
 	CheckMeltQuoteStatus(quoteId string) (MeltQuote, error)
 	// Check a mint quote status from the mint.
 	//
@@ -7568,6 +7578,11 @@ type WalletInterface interface {
 	// **Note:** The mint quote must be known to the wallet (stored locally) for this
 	// function to work. If the quote is not stored locally, use `fetch_mint_quote`
 	// instead.
+	//
+	// Returns the persisted database version and ownership after status/recovery writes.
+	//
+	// # Errors
+	// Returns an error for a mismatched response quote ID or a failed database reload.
 	CheckMintQuoteStatus(quoteId string) (MintQuote, error)
 	// Check if proofs are spent
 	CheckProofsSpent(proofs []Proof) ([]bool, error)
@@ -7616,12 +7631,31 @@ type WalletInterface interface {
 	//
 	// Works with all payment methods (Bolt11, Bolt12, and custom payment methods).
 	//
+	// A quote not created by this wallet instance, such as one fetched after
+	// restoring from seed, is stored without its NUT-20 signing key. Use
+	// `fetch_mint_quote_with_key_search` to recover that key.
+	//
 	// # Arguments
 	// * `quote_id` - The ID of the quote to fetch
 	// * `payment_method` - The payment method for the quote. Required if the quote
 	// is not already stored locally. If the quote exists locally, the stored
 	// payment method will be used and this parameter is ignored.
 	FetchMintQuote(quoteId string, paymentMethod *PaymentMethod) (MintQuote, error)
+	// Fetch a mint quote and try to recover its NUT-20 signing key from the seed.
+	//
+	// Use after restoring a wallet from seed to claim a quote whose ID is known
+	// but whose signing key was lost. Searches the wallet's NUT-20 keys at
+	// counters `0..key_search_limit` for the public key the mint reports and
+	// stores the match, advancing the wallet's NUT-20 counter past it.
+	//
+	// Succeeds even if no key matched. Check `secret_key` on the returned quote:
+	// if set, call `mint`; if not, retry with a larger limit. The limit must
+	// exceed the index the original wallet used, which is below the number of
+	// locked quotes it created. Zero disables the search. Existing keys and
+	// NpubCash quotes are left unchanged, and random keys cannot be recovered.
+	//
+	// This performs network I/O and writes the quote and counter to the local store.
+	FetchMintQuoteWithKeySearch(quoteId string, paymentMethod *PaymentMethod, keySearchLimit uint32) (MintQuote, error)
 	// Finalize pending melt operations for this wallet.
 	FinalizePendingMelts() ([]FinalizedMelt, error)
 	// Wait until the rate-limit budget this wallet drew down has been stored.
@@ -8055,6 +8089,7 @@ func (_self *Wallet) CheckAllPendingProofs() (Amount, error) {
 }
 
 // Check melt quote status and attempt to complete any in-progress saga.
+// Returns the persisted database version and ownership after status/recovery writes.
 func (_self *Wallet) CheckMeltQuoteStatus(quoteId string) (MeltQuote, error) {
 	_pointer := _self.ffiObject.incrementPointer("*Wallet")
 	defer _self.ffiObject.decrementPointer()
@@ -8151,6 +8186,11 @@ func (_self *Wallet) CheckMintQuote(quoteId string) (MintQuote, error) {
 // **Note:** The mint quote must be known to the wallet (stored locally) for this
 // function to work. If the quote is not stored locally, use `fetch_mint_quote`
 // instead.
+//
+// Returns the persisted database version and ownership after status/recovery writes.
+//
+// # Errors
+// Returns an error for a mismatched response quote ID or a failed database reload.
 func (_self *Wallet) CheckMintQuoteStatus(quoteId string) (MintQuote, error) {
 	_pointer := _self.ffiObject.incrementPointer("*Wallet")
 	defer _self.ffiObject.decrementPointer()
@@ -8431,6 +8471,10 @@ func (_self *Wallet) FetchMintInfo() (*MintInfo, error) {
 //
 // Works with all payment methods (Bolt11, Bolt12, and custom payment methods).
 //
+// A quote not created by this wallet instance, such as one fetched after
+// restoring from seed, is stored without its NUT-20 signing key. Use
+// `fetch_mint_quote_with_key_search` to recover that key.
+//
 // # Arguments
 // * `quote_id` - The ID of the quote to fetch
 // * `payment_method` - The payment method for the quote. Required if the quote
@@ -8454,6 +8498,55 @@ func (_self *Wallet) FetchMintQuote(quoteId string, paymentMethod *PaymentMethod
 		},
 		C.uniffi_cdk_ffi_fn_method_wallet_fetch_mint_quote(
 			_pointer, FfiConverterStringINSTANCE.Lower(quoteId), FfiConverterOptionalPaymentMethodINSTANCE.Lower(paymentMethod)),
+		// pollFn
+		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
+		},
+		// freeFn
+		func(handle C.uint64_t) {
+			C.ffi_cdk_ffi_rust_future_free_rust_buffer(handle)
+		},
+	)
+
+	if err == nil {
+		return res, nil
+	}
+
+	return res, err
+}
+
+// Fetch a mint quote and try to recover its NUT-20 signing key from the seed.
+//
+// Use after restoring a wallet from seed to claim a quote whose ID is known
+// but whose signing key was lost. Searches the wallet's NUT-20 keys at
+// counters `0..key_search_limit` for the public key the mint reports and
+// stores the match, advancing the wallet's NUT-20 counter past it.
+//
+// Succeeds even if no key matched. Check `secret_key` on the returned quote:
+// if set, call `mint`; if not, retry with a larger limit. The limit must
+// exceed the index the original wallet used, which is below the number of
+// locked quotes it created. Zero disables the search. Existing keys and
+// NpubCash quotes are left unchanged, and random keys cannot be recovered.
+//
+// This performs network I/O and writes the quote and counter to the local store.
+func (_self *Wallet) FetchMintQuoteWithKeySearch(quoteId string, paymentMethod *PaymentMethod, keySearchLimit uint32) (MintQuote, error) {
+	_pointer := _self.ffiObject.incrementPointer("*Wallet")
+	defer _self.ffiObject.decrementPointer()
+	res, err := uniffiRustCallAsync[*FfiError](
+		FfiConverterFfiErrorINSTANCE,
+		// completeFn
+		func(handle C.uint64_t, status *C.RustCallStatus) RustBufferI {
+			res := C.ffi_cdk_ffi_rust_future_complete_rust_buffer(handle, status)
+			return GoRustBuffer{
+				inner: res,
+			}
+		},
+		// liftFn
+		func(ffi RustBufferI) MintQuote {
+			return FfiConverterMintQuoteINSTANCE.Lift(ffi)
+		},
+		C.uniffi_cdk_ffi_fn_method_wallet_fetch_mint_quote_with_key_search(
+			_pointer, FfiConverterStringINSTANCE.Lower(quoteId), FfiConverterOptionalPaymentMethodINSTANCE.Lower(paymentMethod), FfiConverterUint32INSTANCE.Lower(keySearchLimit)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
 			C.ffi_cdk_ffi_rust_future_poll_rust_buffer(handle, continuation, data)
