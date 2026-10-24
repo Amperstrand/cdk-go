@@ -2102,9 +2102,19 @@ uint64_t uniffi_cdk_ffi_fn_method_wallet_prepare_melt(uint64_t ptr, RustBuffer q
 uint64_t uniffi_cdk_ffi_fn_method_wallet_prepare_melt_proofs(uint64_t ptr, RustBuffer quote_id, RustBuffer proofs
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_PREPARE_MELT_PROOFS_WITH_OPTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_PREPARE_MELT_PROOFS_WITH_OPTIONS
+uint64_t uniffi_cdk_ffi_fn_method_wallet_prepare_melt_proofs_with_options(uint64_t ptr, RustBuffer quote_id, RustBuffer proofs, RustBuffer options
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_PREPARE_MELT_TOKEN
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_PREPARE_MELT_TOKEN
 uint64_t uniffi_cdk_ffi_fn_method_wallet_prepare_melt_token(uint64_t ptr, RustBuffer quote_id, RustBuffer encoded_token
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_PREPARE_MELT_TOKEN_WITH_OPTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_PREPARE_MELT_TOKEN_WITH_OPTIONS
+uint64_t uniffi_cdk_ffi_fn_method_wallet_prepare_melt_token_with_options(uint64_t ptr, RustBuffer quote_id, RustBuffer encoded_token, RustBuffer options
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLET_PREPARE_PAY_REQUEST
@@ -2552,6 +2562,11 @@ uint64_t uniffi_cdk_ffi_fn_method_walletrepository_flush_rate_limits(uint64_t pt
 uint64_t uniffi_cdk_ffi_fn_method_walletrepository_get_balances(uint64_t ptr
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETREPOSITORY_GET_BALANCES_FOR_UNIT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETREPOSITORY_GET_BALANCES_FOR_UNIT
+uint64_t uniffi_cdk_ffi_fn_method_walletrepository_get_balances_for_unit(uint64_t ptr, RustBuffer unit
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETREPOSITORY_GET_OR_CREATE_WALLET
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_METHOD_WALLETREPOSITORY_GET_OR_CREATE_WALLET
 uint64_t uniffi_cdk_ffi_fn_method_walletrepository_get_or_create_wallet(uint64_t ptr, RustBuffer mint_url, RustBuffer unit, RustBuffer target_proof_count
@@ -2943,6 +2958,11 @@ RustBuffer uniffi_cdk_ffi_fn_func_decode_key_set_info(RustBuffer json, RustCallS
 RustBuffer uniffi_cdk_ffi_fn_func_decode_keys(RustBuffer json, RustCallStatus *out_status
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_DECODE_MELT_PREPARE_OPTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_DECODE_MELT_PREPARE_OPTIONS
+RustBuffer uniffi_cdk_ffi_fn_func_decode_melt_prepare_options(RustBuffer json, RustCallStatus *out_status
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_DECODE_MELT_QUOTE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_DECODE_MELT_QUOTE
 RustBuffer uniffi_cdk_ffi_fn_func_decode_melt_quote(RustBuffer json, RustCallStatus *out_status
@@ -3041,6 +3061,11 @@ RustBuffer uniffi_cdk_ffi_fn_func_encode_key_set_info(RustBuffer info, RustCallS
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_ENCODE_KEYS
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_ENCODE_KEYS
 RustBuffer uniffi_cdk_ffi_fn_func_encode_keys(RustBuffer keys, RustCallStatus *out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_ENCODE_MELT_PREPARE_OPTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_ENCODE_MELT_PREPARE_OPTIONS
+RustBuffer uniffi_cdk_ffi_fn_func_encode_melt_prepare_options(RustBuffer options, RustCallStatus *out_status
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_FN_FUNC_ENCODE_MELT_QUOTE
@@ -3567,6 +3592,12 @@ uint16_t uniffi_cdk_ffi_checksum_func_decode_keys(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_DECODE_MELT_PREPARE_OPTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_DECODE_MELT_PREPARE_OPTIONS
+uint16_t uniffi_cdk_ffi_checksum_func_decode_melt_prepare_options(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_DECODE_MELT_QUOTE
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_DECODE_MELT_QUOTE
 uint16_t uniffi_cdk_ffi_checksum_func_decode_melt_quote(void
@@ -3684,6 +3715,12 @@ uint16_t uniffi_cdk_ffi_checksum_func_encode_key_set_info(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_ENCODE_KEYS
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_ENCODE_KEYS
 uint16_t uniffi_cdk_ffi_checksum_func_encode_keys(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_ENCODE_MELT_PREPARE_OPTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_FUNC_ENCODE_MELT_PREPARE_OPTIONS
+uint16_t uniffi_cdk_ffi_checksum_func_encode_melt_prepare_options(void
     
 );
 #endif
@@ -4779,9 +4816,21 @@ uint16_t uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_proofs(void
     
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_PREPARE_MELT_PROOFS_WITH_OPTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_PREPARE_MELT_PROOFS_WITH_OPTIONS
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_proofs_with_options(void
+    
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_PREPARE_MELT_TOKEN
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_PREPARE_MELT_TOKEN
 uint16_t uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_token(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_PREPARE_MELT_TOKEN_WITH_OPTIONS
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLET_PREPARE_MELT_TOKEN_WITH_OPTIONS
+uint16_t uniffi_cdk_ffi_checksum_method_wallet_prepare_melt_token_with_options(void
     
 );
 #endif
@@ -5268,6 +5317,12 @@ uint16_t uniffi_cdk_ffi_checksum_method_walletrepository_flush_rate_limits(void
 #ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETREPOSITORY_GET_BALANCES
 #define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETREPOSITORY_GET_BALANCES
 uint16_t uniffi_cdk_ffi_checksum_method_walletrepository_get_balances(void
+    
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETREPOSITORY_GET_BALANCES_FOR_UNIT
+#define UNIFFI_FFIDEF_UNIFFI_CDK_FFI_CHECKSUM_METHOD_WALLETREPOSITORY_GET_BALANCES_FOR_UNIT
+uint16_t uniffi_cdk_ffi_checksum_method_walletrepository_get_balances_for_unit(void
     
 );
 #endif
