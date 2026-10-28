@@ -4,3 +4,4 @@
 # Generated bindings and native artifacts
 bindings/cdkffi/*.c
 .artifacts/
+bindings/cdkffi/native/static/*/
