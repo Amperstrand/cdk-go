@@ -1,4 +1,4 @@
-//go:build linux && arm64
+//go:build linux && arm64 && !cdk_static
 
 package cdk_ffi
 
