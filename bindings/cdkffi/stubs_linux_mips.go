@@ -2,15 +2,16 @@
 
 package cdk_ffi
 
-// The linux_mips native library is built WITHOUT the nostr feature (32-bit
-// MIPS has no std AtomicU64, which nostr-relay-pool requires — the
-// jmcorgan/fips wall). The generated bindings still reference a handful of
-// nostr-only FFI entry points; they are unreachable on the gateway's wallet
-// paths, so they resolve to loud aborts rather than link failures. If one
-// of these ever fires, the caller tried to use a nostr feature on mips —
-// not supported by this build.
-//
-// #include <stdlib.h>
+/*
+The linux_mips native library is built WITHOUT the nostr feature (32-bit
+MIPS has no std AtomicU64, which nostr-relay-pool requires). The generated
+bindings still reference a handful of nostr-only FFI entry points; they are
+unreachable on the gateway's wallet paths, so they resolve to loud aborts.
+If one ever fires, the caller tried to use a nostr feature on mips.
+*/
+import "C"
+
+#include <stdlib.h>
 // #include <stdint.h>
 // #include <stdio.h>
 // static void mips_nostr_abort(const char *name) {
