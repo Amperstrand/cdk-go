@@ -11,6 +11,7 @@ package cdk_ffi
 // not supported by this build.
 //
 // #include <stdlib.h>
+// #include <stdint.h>
 // #include <stdio.h>
 // static void mips_nostr_abort(const char *name) {
 //     fprintf(stderr, "cdk_ffi(mips): nostr feature %s is not built into the linux_mips native library\n", name);
