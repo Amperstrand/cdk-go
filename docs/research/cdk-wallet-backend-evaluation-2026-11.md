@@ -121,3 +121,40 @@ here; do not mix them.
 `experiments/2026-11-03-e1/`: `stress-main.go` (driver),
 `run-v0.18.2.log` (240 panics), `run-v0.18.3.log` (clean),
 `footprint.txt` (commands + numbers), this session's host/toolchain env.
+
+## Session 2 (2026-11-03, later) — queue items executed
+
+**E1 arm64 differential (QEMU user-mode, upstream prebuilt arm64 `.so`):**
+same driver cross-built (`CC=aarch64-linux-gnu-gcc`, CGO arm64), run
+under `qemu-aarch64-static` — **v0.18.2: 240 panics / v0.18.3: 0**,
+identical to x86_64. Correctness verdict valid under emulation; RSS
+(~274 MB) is QEMU translation overhead — NOT a physical number, do not
+cite it. Physical aarch64 still NOT TESTED.
+
+**#1149 retirement slice (big-RAM lane): DONE, evidence-backed.**
+Branch `OpenTollGate/tollgate-module-basic-go@research/upstream-cdkgo-0183-slice`
+(`9ffccbe8`, off PR #1136 head): single fork reference (the
+`Amperstrand/cdk-go` replace) removed, upstream `cashubtc/cdk-go v0.18.3`
+pinned, no adapter API drift (build clean with `cdk_wallet` tag). Results
+against `testnut.cashu.space` (cdk-mintd 0.18.1 fakewallet):
+- **WalletPort parity contract 5/5** (MintLifecycle, SendReceiveRoundTrip
+  incl. helper leg, MeltLifecycle, Drain, DecodeRejectsGarbage;
+  RecipientHelper self-skips by design as the launched-helper leg);
+- full `src/tollwallet` suite green (`go test -tags cdk_wallet`, 28 s).
+Note: `Amperstrand/tollgate-module-basic-go` fork is **archived** —
+research branches for this repo go to `origin` (OpenTollGate) under the
+`.pr-branch` marker protocol.
+
+**Queue status:** EOF-cascade probe (release racing an in-flight call)
+designed but not run this session — owner's #2788 acceptance suite
+remains that gate. MIPS size-optimized static musl build: **BLOCKED by
+toolchain** on this host (no mips musl cross-gcc; docker+`cross` route
+available as follow-up). MIPS QEMU correctness run against the fork's
+33.5 MB artifacts deliberately skipped — footprint already NO-GO for the
+16 MB class.
+
+**Updated per-tier verdicts:** x86_64 + aarch64 (emulated) in-process
+upstream v0.18.3: **GO-pending-owner-suite** (correctness now doubly
+differential; ops decision vs sidecar is a footprint/containment
+tradeoff). armv7: NOT TESTED. 16 MB MIPS/MIPSel: NOT-YET (sidecar vs
+size-optimized static undecided; item 3 blocked).
