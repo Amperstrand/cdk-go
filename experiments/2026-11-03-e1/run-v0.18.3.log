@@ -1,0 +1,10 @@
+cdk-go FFI lifetime stress: 120 cycles / 4 workers against https://testnut.cashu.space
+[telemetry start] rss=8348kB threads=6 fds=6 goroutines=1 done=0 errs=0
+[telemetry cycle 20] rss=36392kB threads=78 fds=36 goroutines=8 done=22 errs=0
+[telemetry cycle 40] rss=37688kB threads=78 fds=36 goroutines=8 done=43 errs=0
+[telemetry cycle 60] rss=38612kB threads=78 fds=36 goroutines=8 done=62 errs=0
+[telemetry cycle 80] rss=39996kB threads=78 fds=36 goroutines=8 done=83 errs=0
+[telemetry cycle 100] rss=40636kB threads=79 fds=34 goroutines=8 done=103 errs=0
+[telemetry cycle 120] rss=41412kB threads=31 fds=15 goroutines=5 done=120 errs=0
+[telemetry end] rss=41112kB threads=15 fds=9 goroutines=4 done=120 errs=0
+STRESS PASS: no panics, no EOF, all cycles completed

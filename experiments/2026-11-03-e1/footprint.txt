@@ -1,0 +1,11 @@
+# footprint measurements — 2026-11-03, host x86_64, go1.25.8
+
+libcdk_ffi.so (upstream v0.18.3 prebuilt linux_amd64, pre-stripped): 30359384 bytes
+Go binary (dynamic, links .so): 4734104 bytes (cdkgo-stress)
+gonuts baseline CGO_ENABLED=0 static: 12568511 bytes; peak RSS 17636 kB (LoadWallet+Shutdown, 0.25 s)
+mips-ffi natives: linux_mips 33472576, linux_mipsel 33502176, linux_arm64 26645304
+
+commands:
+  ls -la bindings/cdkffi/native/linux_amd64/ ; strip copy (no change — already stripped)
+  CGO_ENABLED=0 go build (gonuts-baseline module, gonuts-tollgate v0.13.0)
+  /usr/bin/time -v ./gonuts-baseline

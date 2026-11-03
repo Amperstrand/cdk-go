@@ -1,0 +1,731 @@
+cdk-go FFI lifetime stress: 120 cycles / 4 workers against https://testnut.cashu.space
+[telemetry start] rss=8204kB threads=6 fds=6 goroutines=1 done=0 errs=0
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+[telemetry cycle 20] rss=36808kB threads=79 fds=34 goroutines=8 done=23 errs=0
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+[telemetry cycle 40] rss=38676kB threads=79 fds=34 goroutines=8 done=43 errs=0
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+[telemetry cycle 60] rss=39772kB threads=79 fds=35 goroutines=8 done=63 errs=0
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+[telemetry cycle 80] rss=40680kB threads=79 fds=35 goroutines=8 done=83 errs=0
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+[telemetry cycle 100] rss=41644kB threads=79 fds=36 goroutines=8 done=103 errs=0
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+[telemetry cycle 120] rss=41232kB threads=31 fds=15 goroutines=5 done=120 errs=0
+
+thread 'async-compat/tokio-1' (1588758) panicked at /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.53.2/src/runtime/blocking/shutdown.rs:51:21:
+Cannot drop a runtime in a context where blocking is not allowed. This happens when a runtime is dropped from within an asynchronous context.
+[telemetry end] rss=40736kB threads=15 fds=9 goroutines=4 done=120 errs=0
+STRESS PASS: no panics, no EOF, all cycles completed
